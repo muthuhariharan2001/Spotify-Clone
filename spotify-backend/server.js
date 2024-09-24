@@ -20,6 +20,14 @@ app.use(cors());
 app.use("/api/song", songRouter);
 app.use('/api/album', albumRouter);
 
-app.get('/', (req, res) => res.send("API Working"));
+app.get('/', (req, res) => res.send(`
+    <html>
+      <body>
+        <h1>Welcome to the Server Page</h1>
+        <h3>API Working Successfully.</h3>
+        <p>Click <a href="https://spotify-clone-frontend-5yba.onrender.com/" target="_blank">Spotify Clone</a> to go back to the Home Page</p>
+      </body>
+    </html>
+  `));
 
 app.listen(port, () => console.log(`Server Started on ${port}`));
